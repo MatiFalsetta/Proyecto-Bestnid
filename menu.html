@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="iso-8859-1">
+		<title>Registrarse</title>
+		<link rel="stylesheet" href="./estilos/estilo.css">
+		<script language="JavaScript" src="./javascript/validarUsuario.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<div id='barraNav'>
+				<a href="./index.php"><img id='nav_logo' src="./imagenes/logo.png"></a>
+				<a href="./index.php""><div class="nav_boton">Inicio</div></a>
+				<a href=""><div class="nav_boton">Opcion 1</div></a>
+				<a href=""><div class="nav_boton">Opcion 2</div></a>
+				<form method="POST" name="iniciarsesion">
+					<div id="ingresar">
+						<input type="submit" value="Ingresar" onclick="valida()">
+					</div>
+					<div class="nav_sesion">
+						<input type="text" name="user" placeholder="Correo"></br>
+						<input type="password" name="pass" placeholder="Contraseña">
+					</div>
+				</form>
+				<a href="./registro.php"><div id="nav_registro">Registrarse</div></a>
+			</div>
+		</nav>
+	</body>
+</html>
