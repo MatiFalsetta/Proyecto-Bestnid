@@ -45,13 +45,13 @@ nav {
 
 #nav_logo {
 	display: inline-block;
-	margin-right: 30px;
+	margin-right: 25px;
 	padding-left: 10px;
 	float: left;
 	height: 60px;
 }
 
-.nav_boton {
+.nav_boton_izq {
 	padding-top: 23px;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -59,6 +59,29 @@ nav {
 	float: left;
 	height: 37px;
 	text-align: center;
+}
+
+.nav_boton_der {
+	padding-top: 23px;
+	padding-left: 30px;
+	display: inline-block;
+	float: right;
+	height: 37px;
+	text-align: center;
+}
+
+.nav_boton_bienvenido {
+	padding-top: 12px;
+	padding-right: 10px;
+	display: inline-block;
+	float: right;
+	height: 37px;
+	text-align: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .nav_sesion {
@@ -79,7 +102,16 @@ nav {
 
 #nav_registro{
 	padding-top: 23px;
-	padding-right: 10px;
+	padding-right: 5px;
+	padding-left: 10px;
+	margin-right: 15px;
+	float: right;
+	height: 37px;
+	text-align: center;
+}
+
+.nav_derecha{
+	margin-top: 23px;
 	padding-left: 10px;
 	margin-right: 15px;
 	float: right;
@@ -93,7 +125,7 @@ nav {
 	box-shadow: 0px 0px 2px #999;
 	width: 1000px;
 	margin: auto;
-	margin-top: 80px;
+	margin-top: 70px;
 	margin-bottom: 10px;
 	overflow: hidden;
 }
