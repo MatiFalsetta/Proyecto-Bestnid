@@ -1,5 +1,6 @@
 <?php
 	include_once("./conectar.php");
+	session_start();
 	$conectar=conectar();
 	$correo=$_POST["user"];
 	$contrasenia=$_POST["pass"];
@@ -9,7 +10,8 @@
 	$tarjeta=$_POST["tarjeta"];
 	$fecha=$_POST["fecha"];
 	$fecha=$fecha[6].$fecha[7].$fecha[8].$fecha[9].'-'.$fecha[0].$fecha[1].'-'.$fecha[3].$fecha[4];
-	$sql= "INSERT INTO usuario (administrador, fechaNac, mail, nombre, apellido, DNI, tarjetaCredito, contrasenia) VALUES ('$0', '$fecha', '$correo', '$nombre', '$apellido', '$DNI', '$tarjeta', '$contrasenia')";
+	$idUsuario = $_SESSION['usuario'];
+	$sql= "UPDATE usuario SET fechaNac='$fecha', mail='$correo', nombre='$nombre', apellido='$apellido', DNI='$DNI', tarjetaCredito='$tarjeta', contrasenia='$contrasenia' WHERE idUsuario=$idUsuario";
 	mysqli_query($conectar,$sql) or die('Error: ' . mysqli_error($con));
-	header("Location: ../index.php?");
+	header("Location: ../index.php");
 ?>

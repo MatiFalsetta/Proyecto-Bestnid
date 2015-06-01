@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="iso-8859-1">
+		<title>Subir Imagen</title>
+		<link rel="stylesheet" href="./estilos/estilo.css">
+	</head>
+	<body>
+		<nav>
+			<div id='barraNav'>
+				<a href="./index.php"><img id='nav_logo' src="./imagenes/logo.png"></a>
+				<a href="./index.php""><div class="nav_boton">Inicio</div></a>
+				<a href=""><div class="nav_boton">Opcion 1</div></a>
+				<a href=""><div class="nav_boton">Opcion 2</div></a>
+				<a href=""><div class="nav_sesion">Iniciar sesion</div></a>
+			</div>
+		</nav>
+		<div id='cuerpo'>
+			<section>
+				<form enctype="multipart/form-data" action="uploader.php" method="POST">
+					<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+					<input name="uploadedfile" type="file">
+					<input type="submit" value="Subir foto">
+				</form>
+			</section>
+			<aside>
+				Bloque de al lado </br>
+			</aside>
+		</div>
+		<footer>
+			<span>Derechos Reservados &copy; 2015-2016</span>
+		</footer>
+	</body>
+</html>
