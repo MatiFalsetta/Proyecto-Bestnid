@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="./estilos/estilo.css">
 	</head>
 	<body>
-		<?php include ('./menu.html'); ?>
+		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
 				<a href="./agregar_categoria.php">Agregar categoria</a></br>

@@ -13,7 +13,7 @@
 		<script src="./javascript/validarCategoria.js"></script>
 	</head>
 	<body>
-		<?php include ('./menu.html'); ?>
+		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
 				<?php

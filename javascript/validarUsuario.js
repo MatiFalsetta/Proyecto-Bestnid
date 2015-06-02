@@ -73,11 +73,6 @@ function validarRegistro(){
         document.registro.tarjeta.focus();
         return (false);
 	}
-	if (($('#datepicker').val().length) != 10 || ($('#datepicker').val().charAt(2)) != '/' || ($('#datepicker').val().charAt(5)) != '/') {
-		alert("Ingrese una fecha valida.");
-        document.registro.fecha.focus();
-        return (false);
-	}
 	document.registro.submit();
 }
 

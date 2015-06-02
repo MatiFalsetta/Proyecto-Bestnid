@@ -6,13 +6,13 @@
 		<link rel="stylesheet" href="./estilos/estilo.css">
 	</head>
 	<body>
-		<?php include ('./menu.html'); ?>
+		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
-				Bloque grande<br>
+				<?php include ('./subastas.php'); ?>
 			</section>
 			<aside>
-				Bloque de al lado </br>
+				<?php include ('./aside.php'); ?>
 			</aside>
 		</div>
 		<footer>
