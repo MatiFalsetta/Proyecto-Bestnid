@@ -142,7 +142,7 @@ section {
 }
 
 aside {
-	width: 169px;
+	width: 168px;
 	margin: 20px;
 	float: left;
 }
@@ -150,7 +150,7 @@ aside {
 footer {
 	background-color: #A8C08C;
 	padding: 10px;
-	height: 200px;
+	height: 80px;
 	min-width: 980px;
 	text-align: center;
 	font-size: 15px;
@@ -162,7 +162,7 @@ footer span {
 	color: white;
 }
 
-#miniSubasta {
+.miniSubasta {
 	box-shadow: 0px 0px 5px 1px #999;
 	width: 720px;
 	height: 200px;
@@ -170,7 +170,16 @@ footer span {
 	margin-bottom: 20px;
 }
 
-#miniFoto {
+.miniSubasta:hover {
+	background-color: #8EF9B2;
+}
+
+.miniSubasta a {
+	color: black;
+}
+
+
+.miniFoto {
 	box-shadow: 0px 0px 2px 1px #999;
 	display: inline-block;
 	margin: 5px;
@@ -178,15 +187,40 @@ footer span {
     width: 190px;
 }
 
-#miniDescripcion {
+.miniDescripcion {
 	float: right;
 	font-size: 15px;
+	font-color: black;
 	margin: 5px;
 	height: 190px;
     width: 510px;
 }
 
-#miniFoto img {
+.miniFoto img {
 	height: 100%;
     width: 100%;
+}
+
+.maxiSubasta {
+	box-shadow: 0px 0px 5px 1px #999;
+	width: 720px;
+	margin-left: 5px;
+}
+
+.maxiFoto {
+	display: inline-block;
+	margin: 20px;
+	width: 680px;
+}
+
+.maxiFoto img {
+    width: 100%;
+}
+
+.maxiDescripcion {
+	font-size: 20px;
+	font-color: black;
+	margin: auto;
+	padding-bottom: 20px;
+	width: 680px;
 }

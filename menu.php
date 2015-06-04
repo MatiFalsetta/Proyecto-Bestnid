@@ -10,7 +10,7 @@
 	<body>
 		<nav>
 			<div id='barraNav'>
-				<a href="./index.php"><img id='nav_logo' src="./imagenes/logo.png"></a>
+				<a href="./index.php"><img id='nav_logo' src="./imagenes/bestnid/logo.png"></a>
 				<a href="./index.php""><div class="nav_boton_izq">Inicio</div></a>
 				<a href=""><div class="nav_boton_izq">Preguntas frecuentes</div></a>
 				<?php

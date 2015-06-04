@@ -18,7 +18,14 @@
 					}
 					mysqli_close($conec);
 				?>
-			</select>
+			</select></br>
+			<h6>Orden de busqueda:</h6>
+			<select name='orden'>
+				<option value='ASC'>Ascendente</option>
+				<option value='DESC'>Descendente</option>
+			</select></br>
+			<h6>Buscar a partir de la fecha:</h6>
+			<input type="date" name="fechafin" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
 			<input type='submit' value='filtrar'>
 		</form>
 </html>
