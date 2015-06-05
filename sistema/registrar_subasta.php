@@ -5,8 +5,8 @@
 	$idUsuario = $_SESSION['usuario'];
 	$titulo=$_POST["titulo"];
 	$descripcion=$_POST["descripcion"];
-	$fechaFin=$_POST["fechafin"];
-	$fechaInicio=date('Y-m-d');
+	$fechaFin=$_POST["fechafin"]." ".$_POST["fechafinhora"];
+	$fechaInicio=date("Y-m-d H:i:s");
 	$imagenNombre=$_FILES['imagen']['name'];
 	$imagen="imagenes/$imagenNombre";
 	move_uploaded_file($_FILES['imagen']['tmp_name'], "../".$imagen);
@@ -18,5 +18,5 @@
     for ($i = 0; $i < $count; $i++) {
         mysqli_query($conectar,"INSERT INTO subastacategoria (idSubasta, idCategoria) VALUES ('$idSubasta', '$categorias[$i]')") or die('Error: ' . mysqli_error($con));
     }
-	header("Location: ../index.php?");
+	header("Location: ../ver_mis_subastas.php?error=8");
 ?>

@@ -23,8 +23,8 @@
 					<div class="maxiFoto"><img src="./<?php echo $subasta['foto'] ?>"></div>
 					<div class="maxiDescripcion">
 						<p><b>Titulo:</b> <?php echo $subasta['titulo']; ?></p>
-						<p><b>Fecha de Inicio:</b> <?php echo date_format(date_create($subasta['fechaInicio']), 'd/m/Y'); ?>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-						<b>Fecha de Finalizacion:</b> <?php echo date_format(date_create($subasta['fechaFin']), 'd/m/Y'); ?></p>
+						<p><b>Fecha de Inicio:</b> <?php echo date_format(date_create($subasta['fechaInicio']), 'd/m/Y - H:i'); ?>hs.</p> 
+						<p><b>Fecha de Finalizacion:</b> <?php echo date_format(date_create($subasta['fechaFin']), 'd/m/Y - H:i'); ?>hs.</p>
 						<p><b>Categorias:</b>
 						<?php
 						while($categoria=mysqli_fetch_array($resulCateg)){

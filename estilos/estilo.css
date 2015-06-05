@@ -45,28 +45,18 @@ nav {
 
 #nav_logo {
 	display: inline-block;
-	margin-right: 20px;
-	padding-left: 10px;
+	margin-right: 10px;
+	padding-left: 5px;
 	float: left;
 	height: 60px;
 }
 
-.nav_boton_izq {
+.nav_boton {
 	padding-top: 23px;
 	padding-right: 15px;
 	padding-left: 15px;
-	display: inline-block;
+	padding-bottom: 20px;
 	float: left;
-	height: 37px;
-	text-align: center;
-}
-
-.nav_boton_der {
-	padding-top: 23px;
-	padding-left: 30px;
-	display: inline-block;
-	float: right;
-	height: 37px;
 	text-align: center;
 }
 
@@ -74,9 +64,6 @@ nav {
 	margin-top: -7px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	padding-right: 10px;
-	padding-left: 10px;
-	margin-right: 10px;
 	display: inline-block;
 	width: 120px;
 	text-align: center;
@@ -85,8 +72,8 @@ nav {
 .nav_boton_bienvenido {
 	padding-top: 12px;
 	padding-right: 10px;
-	display: inline-block;
-	float: right;
+	margin-right: 135px;
+	float: left;
 	height: 37px;
 	text-align: center;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -98,27 +85,41 @@ nav {
 
 .nav_sesion {
 	margin-top: 7px;
-	float: right;
+	margin-left: 15px;
+	width: 120px;
+	float: left;
 }
 
 .nav_sesion input {
-	margin-bottom: 5px;	
+	margin-bottom: 5px;
+	width: 145px;
+	height: 15px;
 }
 
 #ingresar input {
 	margin-top: 7px;
 	margin-left: 5px;
-	float: right;
 	height: 47px;
+	float: right;
 }
 
-.nav_derecha{
-	margin-top: 23px;
-	padding-left: 10px;
-	margin-right: 15px;
+#nav_derecha{
 	float: right;
-	height: 37px;
+	height: 60px;
+	width: 500px;
 	text-align: center;
+}
+
+#excepcion {
+	background-color: #8EF9B2;
+	box-shadow: 0px 0px 1px 1px #999;
+	height: 20px;
+	width: 1000px;
+	text-align: center;
+	font-size: 15px;
+	margin: auto;
+	margin-top: 70px;
+	margin-bottom: -60px;
 }
 
 #cuerpo {
@@ -129,22 +130,60 @@ nav {
 	margin: auto;
 	margin-top: 70px;
 	margin-bottom: 10px;
+	min-height: 800px;
 	overflow: hidden;
 }
 
 section {
-	border-left: 1px solid gray;
 	width: 730px;
-	margin: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
 	padding-left: 20px;
-	min-height: 750px;
 	float: right;
 }
 
 aside {
-	width: 168px;
-	margin: 20px;
+	width: 210px;
+	margin-left: 20px;
+	margin-top: 20px;
 	float: left;
+}
+
+#filtro_aside {
+	box-shadow: 0px 0px 4px 1px #999;
+	text-align: center;
+	width: 200px;
+	padding-top: 1px;
+	padding-bottom: 5px;
+}
+
+#filtro_aside select {
+	width: 140px;
+}
+
+#filtro_aside input {
+	width: 140px;
+	margin-bottom: 20px
+}
+
+.boton_aside {
+	box-shadow: 0px 0px 2px 1px #999;
+	background-color: #EEEEEE;
+	text-align: center;
+	width: 200px;
+	margin-top: 20px;
+	padding-top: 10px;
+	height: 30px;
+}
+
+.boton_aside:hover {
+	background-color: #8EF9B2;
+}
+
+a {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: black;
 }
 
 footer {
@@ -164,9 +203,9 @@ footer span {
 
 .miniSubasta {
 	box-shadow: 0px 0px 5px 1px #999;
-	width: 720px;
+	background-color: #EEEEEE;
+	width: 730px;
 	height: 200px;
-	margin-left: 5px;
 	margin-bottom: 20px;
 }
 
@@ -204,6 +243,7 @@ footer span {
 .maxiSubasta {
 	box-shadow: 0px 0px 5px 1px #999;
 	width: 720px;
+	margin-bottom: 20px;
 	margin-left: 5px;
 }
 
@@ -218,7 +258,7 @@ footer span {
 }
 
 .maxiDescripcion {
-	font-size: 20px;
+	font-size: 18px;
 	font-color: black;
 	margin: auto;
 	padding-bottom: 20px;

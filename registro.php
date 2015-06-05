@@ -17,7 +17,7 @@
 					<input type="text" id="apellido" name="apellido" placeholder="Apellido"></br>
 					<input type="number" id="dni" name="DNI" placeholder="DNI"></br>
 					<input type="number" id="tarjeta" name="tarjeta" placeholder="Tarjeta de Credito"></br>
-					<input type="date" id="fecha" name="fecha" placeholder="Fecha de Nacimiento"></br>
+					<input type="date" id="fecha" name="fecha" value="<?php echo date('Y-m-d'); ?>" placeholder="Fecha de Nacimiento"></br>
 					<input type="button" value="Registrar" onclick="validarRegistro()">
 				</form>
 			</section>

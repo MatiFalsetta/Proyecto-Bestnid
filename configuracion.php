@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if($_SESSION['usuario'] == ''){
-		header('Location: ./index.php');
+		header('Location: ./index.php?error=-1');
 	}
 ?>
 <!DOCTYPE html>

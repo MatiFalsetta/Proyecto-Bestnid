@@ -6,7 +6,7 @@
 	</head>
 		<div id="filtro_aside">
 			<h5>Filtrar por Categorias:</h5>
-			<form method="GET" name="filtro_subastas" action="./index.php">
+			<form method="GET" name="filtro_subastas" action="./ver_mis_subastas.php">
 				<select name='categoria'>
 					<option value='-1'>Todas</option>
 					<?php
@@ -25,7 +25,7 @@
 					<option value='DESC'>Descendente</option>
 				</select></br>
 				<h5>Buscar a partir de la</br> fecha de finalizacion:</h5>
-				<input type="date" name="fechafin" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
+				<input type="date" name="fechafin" value="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
 				<input type="time" name="fechafinhora" value="23:59"></br>
 				<input type='submit' value='filtrar'>
 			</form>
@@ -36,7 +36,6 @@
 			}
 			if(isset($_SESSION['usuario'])) {
 		?>
-			<a href="./ver_mis_subastas.php"><div class="boton_aside">Ver mis subastas</div></a>
 			<a href="./iniciar_subasta.php"><div class="boton_aside">Iniciar subasta</div></a>
 		<?php
 			}

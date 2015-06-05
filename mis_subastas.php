@@ -6,9 +6,13 @@
 	</head>
 	<?php
 	include_once("./sistema/conectar.php");
+	if(!isset($_SESSION)){
+		session_start();
+	}
+	$idUsuario=$_SESSION['usuario'];
 	$conectar=conectar();
 	$hoy=date('Y-m-d H:i:s');
-	$consulta="SELECT DISTINCT subasta.idSubasta, subasta.titulo, subasta.descripcion, subasta.foto, subasta.fechaInicio, subasta.fechaFin FROM subasta INNER JOIN subastacategoria ON (subasta.idSubasta = subastacategoria.idSubasta) INNER JOIN categoria ON (subastacategoria.idCategoria = categoria.idCategoria) WHERE subasta.fechaFin > '$hoy'";
+	$consulta="SELECT DISTINCT subasta.idSubasta, subasta.titulo, subasta.descripcion, subasta.foto, subasta.fechaInicio, subasta.fechaFin FROM subasta INNER JOIN subastacategoria ON (subasta.idSubasta = subastacategoria.idSubasta) INNER JOIN categoria ON (subastacategoria.idCategoria = categoria.idCategoria) WHERE subasta.idUsuario = '$idUsuario'";
 	$categoria=-1;
 	$orden="ASC";
 	if(isset($_GET['categoria'])){

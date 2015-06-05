@@ -10,7 +10,10 @@
 		$_SESSION['usuario'] = $usuario['idUsuario'];
 		$_SESSION['admin'] = $usuario['administrador'];
 		$_SESSION['nombre'] = $usuario['nombre'];
+		header("Location: ../index.php?error=0");
 	}
-	header("Location: ../index.php");
+	else{
+		header("Location: ../index.php?error=1");
+	}
 	mysqli_close($conec);
 ?>

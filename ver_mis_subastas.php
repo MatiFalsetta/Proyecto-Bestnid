@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if($_SESSION['usuario'] != '1'){
+	if($_SESSION['usuario'] == ''){
 		header('Location: ./index.php?error=-1');
 	}
 ?>
@@ -8,21 +8,17 @@
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Configuracion</title>
+		<title>Inicio</title>
 		<link rel="stylesheet" href="./estilos/estilo.css">
-		<script src="./javascript/validarCategoria.js"></script>
 	</head>
 	<body>
 		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
-				<form method="POST" name="categoria" action="./sistema/agragar_categoria.php">
-					<input type="text" id="categoria" name="categoria" placeholder="Nombre">
-					<input type="button" value="Agregar" onclick="validar()">
-				</form>
+				<?php include ('./mis_subastas.php'); ?>
 			</section>
 			<aside>
-				Bloque de al lado </br>
+				<?php include ('./mi_aside.php'); ?>
 			</aside>
 		</div>
 		<footer>

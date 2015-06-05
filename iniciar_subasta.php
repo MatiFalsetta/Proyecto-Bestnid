@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if($_SESSION['usuario'] == ''){
-		header('Location: ./index.php');
+		header('Location: ./index.php?error=-1');
 	}
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,8 @@
 				<form enctype="multipart/form-data" method="POST" name="subasta" action="./sistema/registrar_subasta.php">
 					<input type="text" id="titulo" name="titulo" placeholder="Titulo"></br>
 					<textarea id="descripcion" name="descripcion" placeholder="Descripcion"></textarea></br>
-					<input type="date" name="fechafin" value="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
+					<input type="date" id="fechafin" name="fechafin" value="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
+					<input type="time" name="fechafinhora" value="23:59"></br>
 					<?php
 						include('./sistema/conectar.php');
 						$conec=conectar();
