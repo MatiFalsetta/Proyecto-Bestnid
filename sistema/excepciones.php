@@ -50,6 +50,21 @@
 			case 10:
 				return("No se ha podido registrar. Ya existe un usuario con el mismo correo electronico.");
 			break;
+			case 11:
+				return("No se ha podido eliminar la categoria. Existen subastas que la contienen.");
+			break;
+			case 12:
+				return("No se ha podido editar la categoria. Ya existe una con el mismo nombre.");
+			break;
+			case 13:
+				return("No se ha podido agregar la categoria. Ya existe una con el mismo nombre.");
+			break;
+			case 14:
+				return("Se le han quitado los permisos de administrador con exito.");
+			break;
+			case 15:
+				return("Se le han otorgado los permisos de administrador con exito.");
+			break;
 		}
 	}
 ?>

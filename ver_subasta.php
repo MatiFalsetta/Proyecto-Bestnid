@@ -31,7 +31,7 @@
 							echo $categoria['nombre'].", ";
 						}						
 						?></p>
-						<p><b>Subastador: </b><a href="./ver_usuario.php?id=<?php echo $subasta['idUsuario']; ?>"><?php echo $subasta['nombre']." ".$subasta['apellido']; ?></a></p>
+						<p><b>Subastador: </b><?php echo $subasta['nombre']." ".$subasta['apellido']." - ".$subasta['mail']; ?></p>
 						<p><b>Descripcion:</b> <?php echo $subasta['descripcion']; ?></p>
 					</div>
 				</div>

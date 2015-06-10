@@ -36,7 +36,6 @@
 				</form>
 			</section>
 			<aside>
-				Bloque de al lado </br>
 			</aside>
 		</div>
 		<footer>

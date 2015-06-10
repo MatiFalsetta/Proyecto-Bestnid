@@ -10,6 +10,7 @@
 		<meta charset="iso-8859-1">
 		<title>Configuracion</title>
 		<link rel="stylesheet" href="./estilos/estilo.css">
+		<link rel="stylesheet" href="./estilos/otros_estilos.css">
 	</head>
 	<body>
 		<?php include ('./menu.php'); ?>
@@ -17,13 +18,17 @@
 			<section>
 				<?php
 					if($_SESSION['admin'] == '1'){
-						echo '<a href="./menu_administrador.php">Menu ADMINISTRADOR</a></br>';
+				?>
+						<a href="./listar_categorias.php"><div class="boton_configuracion">Configurar categorias</div></a>
+						<a href="./listar_usuarios.php"><div class="boton_configuracion">Listar usuarios registrados</div></a>
+						</br>
+				<?php
 					}
 				?>
-				<a href="./modificar_datos.php">Modificar los datos de la cuenta</a>
+				<a href="./modificar_datos.php"><div class="boton_configuracion">Modificar los datos de la cuenta</div></a>
+				<a href="./ver_ofertas_realizadas.php"><div class="boton_configuracion">Ver las ofertas que realice</div></a>
 			</section>
 			<aside>
-				Bloque de al lado </br>
 			</aside>
 		</div>
 		<footer>

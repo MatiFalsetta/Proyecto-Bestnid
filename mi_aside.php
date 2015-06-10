@@ -7,6 +7,18 @@
 		<div id="filtro_aside">
 			<h5>Filtrar por Categorias:</h5>
 			<form method="GET" name="filtro_subastas" action="./ver_mis_subastas.php">
+				<?php
+					$fecha=date('Y-m-d');
+					$hora='12:00';
+					$categoria=-1;
+					if(isset($_GET['categoria'])){
+						$categoria=$_GET["categoria"];
+						$fecha=$_GET["fechafin"];
+						$hora=$_GET["fechafinhora"];
+						$consulta=$consulta." AND subasta.fechaFin > '$fecha'";
+						$orden=$_GET["orden"];
+					}
+				?>
 				<select name='categoria'>
 					<option value='-1'>Todas</option>
 					<?php
@@ -14,7 +26,11 @@
 						$conec=conectar();
 						$resultado=mysqli_query($conec,"SELECT * FROM categoria");
 						while($categorias=mysqli_fetch_array($resultado)){
-							echo "<option value=".$categorias['idCategoria'].">".$categorias['nombre']."</option>";
+							$selected='';
+							if($categoria == $categorias['idCategoria']){
+								$selected='selected';
+							}
+							echo "<option value=".$categorias['idCategoria']." ".$selected.">".$categorias['nombre']."</option>";
 						}
 						mysqli_close($conec);
 					?>
@@ -22,11 +38,11 @@
 				<h5>Orden de busqueda:</h5>
 				<select name='orden'>
 					<option value='ASC'>Ascendente</option>
-					<option value='DESC'>Descendente</option>
+					<option value='DESC' <?php if($orden == 'DESC'){echo 'selected';}; ?>>Descendente</option>
 				</select></br>
 				<h5>Buscar a partir de la</br> fecha de finalizacion:</h5>
-				<input type="date" name="fechafin" value="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
-				<input type="time" name="fechafinhora" value="23:59"></br>
+				<input type="date" name="fechafin" value="<?php echo $fecha; ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
+				<input type="time" name="fechafinhora" value="<?php echo $hora; ?>"></br>
 				<input type='submit' value='filtrar'>
 			</form>
 		</div>

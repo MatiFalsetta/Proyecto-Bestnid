@@ -6,6 +6,9 @@
 	if(mysqli_num_rows($resul)==0){
 		$sql= "INSERT INTO categoria (nombre) VALUES ('$nombre')";
 		mysqli_query($conec,$sql) or die('Error: ' . mysqli_error($con));
+		header("Location: ../listar_categorias.php?error=3");
 	}
-	header("Location: ../menu_administrador.php?error=3");
+	else {
+		header("Location: ../listar_categorias.php?error=13");
+	}
 ?>
