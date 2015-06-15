@@ -76,3 +76,124 @@
 .caja2 input {
 	width: 235px;
 }
+
+.maxiSubasta {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #EEEEEE;
+	width: 720px;
+	margin-bottom: 20px;
+	margin-left: 5px;
+}
+
+.maxiSubasta input {
+	width: 110px;
+	height: 25px;
+	float: right;
+	margin-top: -15px;
+	margin-right: 20px;
+}
+
+.maxiFoto {
+	display: inline-block;
+	margin: 20px;
+	width: 680px;
+}
+
+.maxiFoto img {
+	box-shadow: 0px 0px 1px 1px #999;
+    width: 100%;
+}
+
+.maxiDescripcion {
+	font-size: 18px;
+	font-color: black;
+	margin: auto;
+	padding-bottom: 10px;
+	width: 680px;
+}
+
+#comentarios {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #DDDDDD;
+	width: 680px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	padding: 20px;
+}
+
+#crear_comentario {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.comentario {
+	box-shadow: 0px 0px 5px 1px #999;
+	display: inline-block;
+	background-color: #EEEEEE;
+	border-radius: 2px;
+	width: 660px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.comentario input {
+	float: right;
+	margin-bottom: -5px;
+}
+
+.comentario_encabezado {
+	display: inline-block;
+	width: 660px;
+	margin-bottom: 5px;
+}
+
+.comentario_encabezado_izq {
+	float: left;
+}
+
+.comentario_encabezado_der {
+	float: right;
+}
+
+.comentario_texto {
+	display: inline-block;
+	width: 660px;
+	border-top: 1px solid #BBBBBB;
+	padding-top: 5px;
+}
+
+#crear_comentario textarea {
+	width: 674px;
+	height: 80px;
+	resize: none;
+}
+
+#crear_comentario input {
+	width: 120px;
+	height: 30px;
+	float: right;
+}
+
+#pesos {
+	margin-top: -12px;
+	float: left;
+}
+
+#pesos input {
+	margin-top: -3px;
+	margin-left: 5px;
+	width: 120px;
+	height: 20px;
+}
+
+#oferta {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #FFFF99;
+	width: 680px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 1px;
+}

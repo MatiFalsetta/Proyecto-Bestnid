@@ -65,6 +65,21 @@
 			case 15:
 				return("Se le han otorgado los permisos de administrador con exito.");
 			break;
+			case 16:
+				return("Se ha modificado la oferta con exito.");
+			break;
+			case 17:
+				return("No se ha podido modificar la oferta, intentelo nuevamente.");
+			break;
+			case 18:
+				return("Se ha eliminado la oferta con exito.");
+			break;
+			case 19:
+				return("Se ha eliminado la subasta con exito.");
+			break;
+			case 20:
+				return("No se ha podido eliminar la subasta ya que contiene comentarios u ofertas realizadas.");
+			break;
 		}
 	}
 ?>

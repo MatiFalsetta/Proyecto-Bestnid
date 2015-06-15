@@ -113,7 +113,7 @@ nav {
 #excepcion {
 	background-color: #8EF9B2;
 	box-shadow: 0px 0px 1px 1px #999;
-	height: 20px;
+	height: 18px;
 	width: 1000px;
 	text-align: center;
 	font-size: 15px;
@@ -238,38 +238,4 @@ footer span {
 .miniFoto img {
 	height: 100%;
     width: 100%;
-}
-
-.maxiSubasta {
-	box-shadow: 0px 0px 5px 1px #999;
-	width: 720px;
-	margin-bottom: 20px;
-	margin-left: 5px;
-}
-
-.maxiFoto {
-	display: inline-block;
-	margin: 20px;
-	width: 680px;
-}
-
-.maxiFoto img {
-    width: 100%;
-}
-
-.maxiDescripcion {
-	font-size: 18px;
-	font-color: black;
-	margin: auto;
-	padding-bottom: 20px;
-	width: 680px;
-}
-
-#registro {
-	box-shadow: 0px 0px 5px 1px #999;
-	background-color: #EEEEEE;
-	width: 730px;
-	height: 300px;
-	margin-bottom: 20px;
-	text-align: center;
 }

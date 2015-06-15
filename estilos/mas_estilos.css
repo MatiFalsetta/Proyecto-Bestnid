@@ -1,0 +1,14 @@
+#registro {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #EEEEEE;
+	width: 500px;
+	height: 600px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#registro input {
+	width: 200px;
+	height: 30px;
+	margin-top: 20px;
+}

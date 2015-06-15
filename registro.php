@@ -5,6 +5,7 @@
 		<title>Registrarse</title>
 		<script src="./javascript/validarUsuario.js"></script>
 		<link rel="stylesheet" type="text/css" href="./estilos/estilo.css">
+		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
 	</head>
 	<body>
 		<?php include ('./menu.php'); ?>
@@ -24,7 +25,6 @@
 				</div>
 			</section>
 			<aside>
-				Bloque de al lado</br>
 			</aside>
 		</div>
 		<footer>
