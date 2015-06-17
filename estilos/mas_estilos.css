@@ -2,13 +2,118 @@
 	box-shadow: 0px 0px 5px 1px #999;
 	background-color: #EEEEEE;
 	width: 500px;
-	height: 600px;
+	padding-top: 1px;
 	margin-bottom: 20px;
 	text-align: center;
+	
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
 }
 
 #registro input {
 	width: 200px;
 	height: 30px;
-	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#boton_ver_ofertas {
+	box-shadow: 0px 0px 2px 1px #999;
+	background-color: #8EF9B2;
+	float: left;
+	text-align: center;
+	width: 120px;
+	margin-top: -25px;
+	margin-left: 20px;
+	padding-top: 5px;
+	height: 20px;
+}
+
+#boton_ver_ofertas:hover {
+	background-color: #99FFCC;
+}
+
+#iniciar_subasta {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #EEEEEE;
+	width: 500px;
+	padding-top: 1px;
+	margin-bottom: 20px;
+	text-align: center;
+	
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
+}
+
+#iniciar_subasta input {
+	width: 250px;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+#iniciar_subasta textarea {
+	width: 300px;
+	height: 150px;
+	resize: none;
+	margin-bottom: 20px;
+}
+
+#categorias {
+	width: 300px;
+	text-align: left;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+#categorias input {
+	width: 20px;
+	height: 15px;
+	margin-bottom: 5px;
+}
+
+#mis_ofertas {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #EEEEEE;
+	width: 500px;
+	padding-top: 1px;
+	margin-bottom: 20px;
+	text-align: center;
+	
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	text-decoration: none;
+	color: #333333;
+}
+
+.oferta {
+	box-shadow: 0px 0px 2px 1px #999;
+	background-color: #99FFCC;
+	width: 400px;
+	margin: auto;
+	padding: 10px;
+	text-align: left;
+}
+
+.oferta:hover {
+	background-color: #8EF9B2;
+}
+
+.o {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
+	display: inline-block;
 }

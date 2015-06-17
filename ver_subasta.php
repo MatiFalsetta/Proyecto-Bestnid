@@ -30,6 +30,7 @@
 		<meta charset="iso-8859-1">
 		<title>Inicio</title>
 		<link href="./estilos/estilo.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
 		<link href="./estilos/otros_estilos.css" rel="stylesheet" type="text/css">
 		<script src="./javascript/validarTextarea.js"></script>
 	</head>
@@ -43,16 +44,6 @@
 				?>
 				<div class="maxiSubasta">
 					<div class="maxiFoto"><img src="./<?php echo $subasta['foto'] ?>"></div>
-					<?php
-						if(isset($_SESSION['usuario']) && ($_SESSION['admin']=='1' || $_SESSION['usuario']==$subasta['idUsuario'])) {
-					?>
-							<form method="POST" name="eliminar_subasta" action="./sistema/eliminar_subasta.php">
-								<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
-								<input type="submit" value="Eliminar subasta">
-							</form>
-					<?php
-						}
-					?>
 					<div class="maxiDescripcion">
 						<p><b>Titulo:</b> <?php echo $subasta['titulo']; ?></p>
 						<p><b>Fecha de Inicio:</b> <?php echo date_format(date_create($subasta['fechaInicio']), 'd/m/Y - H:i'); ?>hs.</p> 
@@ -66,6 +57,17 @@
 						<p><b>Subastador: </b><?php echo $subasta['nombre']." ".$subasta['apellido']." - ".$subasta['mail']; ?></p>
 						<p><b>Descripcion:</b> <?php echo $subasta['descripcion']; ?></p>
 					</div>
+					<?php
+						if(isset($_SESSION['usuario']) && ($_SESSION['admin']=='1' || $_SESSION['usuario']==$subasta['idUsuario'])) {
+					?>
+							<a href="./ver_ofertas.php?id=<?php echo $id ?>"><div id="boton_ver_ofertas">Ver ofertas</div></a>
+							<form method="POST" name="eliminar_subasta" action="./sistema/eliminar_subasta.php">
+								<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
+								<input type="submit" value="Eliminar subasta">
+							</form>
+					<?php
+						}
+					?>
 				</div>
 				<?php
 					if(!isset($_SESSION)) {
@@ -82,7 +84,7 @@
 									<form method="POST" name="crear_oferta" action="./sistema/crear_oferta.php">
 										<textarea name="oferta" rows="6" cols="80" id="ofertar" maxlength="1000" placeholder="¿Por que quieres este producto?"></textarea>
 										<div id="pesos">
-											<p><b>Monto:&nbsp</b> <input type="number" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="1"></p>
+											<p><b>Pesos:&nbsp$</b> <input type="number" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="1"></p>
 										</div>
 										<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
 										<input type="button" value="Ofertar" onclick="validarOferta()">
@@ -100,7 +102,7 @@
 									<form method="POST" name="modificar_oferta" action="./sistema/modificar_oferta.php">
 										<textarea name="oferta" rows="6" cols="80" id="ofertar" maxlength="1000"><?php echo $re['descripcion']; ?></textarea>
 										<div id="pesos">
-											<p><b>Monto:&nbsp</b> <input type="number" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="<?php echo $re['precio']; ?>"></p>
+											<p><b>Pesos:&nbsp$</b> <input type="number" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="<?php echo $re['precio']; ?>"></p>
 										</div>
 										<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
 										<input type="submit" value="Modificar">

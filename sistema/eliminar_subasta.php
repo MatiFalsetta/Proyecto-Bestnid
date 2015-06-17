@@ -9,6 +9,8 @@
 	if(mysqli_num_rows($resultado) == 0 && mysqli_num_rows($resultado2) == 0) {
 		$sql= "DELETE FROM subasta WHERE idSubasta='$idSubasta'";
 		mysqli_query($conectar,$sql);
+		$sql2= "DELETE FROM subastacategoria WHERE idSubasta='$idSubasta'";
+		mysqli_query($conectar,$sql2);
 		header("Location: ../index.php?error=19");
 	}
 	else{

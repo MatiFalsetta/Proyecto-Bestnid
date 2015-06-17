@@ -53,6 +53,11 @@ function validarRegistro(){
         document.registro.pass.focus();
         return (false);
 	}
+	if ($('#pass').val() != $('#pass2').val()) {
+		alert("Las contraseñas ingresadas no coinciden.");
+        document.registro.pass.focus();
+        return (false);
+	}
 	if ($('#nombre').val().length < 2 || $('#nombre').val().length > 50) {
 		alert("Ingrese un nombre valido.");
         document.registro.nombre.focus();

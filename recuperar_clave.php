@@ -4,19 +4,23 @@
 		<meta charset="iso-8859-1">
 		<title>Configuracion</title>
 		<link rel="stylesheet" href="./estilos/estilo.css">
+		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
 		<script src="./javascript/validarCategoria.js"></script>
 	</head>
 	<body>
 		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
-				<form method="POST" name="correo" action="./sistema/recuperar_clave.php">
-					<input type="email" id="email" name="correo" placeholder="Correo">
-					<input type="submit" value="Recuperar">
-				</form>
+				<div id="iniciar_subasta">
+					<h2>Recuperar clave</h2>
+					<form method="POST" name="correo" action="./sistema/recuperar_clave.php">
+						Ingrese su email: </br>
+						<input type="email" id="email" name="correo" placeholder="Correo">
+						<input type="submit" value="Recuperar">
+					</form>
+				</div>
 			</section>
 			<aside>
-				Bloque de al lado </br>
 			</aside>
 		</div>
 		<footer>

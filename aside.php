@@ -52,8 +52,9 @@
 			}
 			if(isset($_SESSION['usuario'])) {
 		?>
-			<a href="./ver_mis_subastas.php"><div class="boton_aside">Ver mis subastas</div></a>
 			<a href="./iniciar_subasta.php"><div class="boton_aside">Iniciar subasta</div></a>
+			<a href="./ver_mis_subastas.php"><div class="boton_aside">Ver mis subastas</div></a>
+			<a href="./ver_mis_ofertas.php"><div class="boton_aside">Ver ofertas realizadas</div></a>
 		<?php
 			}
 		?>

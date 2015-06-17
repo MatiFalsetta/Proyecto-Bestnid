@@ -81,21 +81,23 @@
 	box-shadow: 0px 0px 5px 1px #999;
 	background-color: #EEEEEE;
 	width: 720px;
-	margin-bottom: 20px;
+	padding-bottom: 10px;
 	margin-left: 5px;
+	margin-bottom: 10px;
 }
 
 .maxiSubasta input {
 	width: 110px;
 	height: 25px;
 	float: right;
-	margin-top: -15px;
+	margin-top: -25px;
 	margin-right: 20px;
 }
 
 .maxiFoto {
 	display: inline-block;
-	margin: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
 	width: 680px;
 }
 
@@ -108,7 +110,7 @@
 	font-size: 18px;
 	font-color: black;
 	margin: auto;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	width: 680px;
 }
 
