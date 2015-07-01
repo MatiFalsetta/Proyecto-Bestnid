@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Configuracion</title>
+		<title>Bestnid Recuperar Clave</title>
 		<link rel="stylesheet" href="./estilos/estilo.css">
 		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
 		<script src="./javascript/validarCategoria.js"></script>
@@ -11,12 +11,12 @@
 		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
-				<div id="iniciar_subasta">
+				<div id="registro">
 					<h2>Recuperar clave</h2>
 					<form method="POST" name="correo" action="./sistema/recuperar_clave.php">
-						Ingrese su email: </br>
-						<input type="email" id="email" name="correo" placeholder="Correo">
-						<input type="submit" value="Recuperar">
+						Ingrese su email: </br>&nbsp</br>
+						<input type="email" id="email" name="correo" placeholder="Correo"></br>
+						<input type="submit" value="Recuperar"></br>
 					</form>
 				</div>
 			</section>

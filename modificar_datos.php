@@ -1,23 +1,24 @@
 <?php
 	session_start();
 	if($_SESSION['usuario'] == ''){
-		header('Location: ./index.php?error=-1');
+		header('Location: ./index.php?error=0');
 	}
 ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Configuracion</title>
+		<title>Bestnid Modificar Datos</title>
 		<script src="./javascript/validarUsuario.js"></script>
 		<link rel="stylesheet" href="./estilos/estilo.css">
 		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
+		<link rel="stylesheet" type="text/css" href="./estilos/nuevos_estilos.css">
 	</head>
 	<body>
 		<?php include ('./menu.php'); ?>
 		<div id='cuerpo'>
 			<section>
-				<div id="registro">
+				<div id="contenedor-registro">
 					<h2>Modificar los datos de la cuenta</h2>
 					<form method="POST" name="registro" action="./sistema/modificar_datos_usuario.php">
 						<?php
@@ -32,6 +33,8 @@
 						<input type="email" id="email" name="user" value="<?php echo $usuario['mail']; ?>"></br>
 						Contraseña:</br>
 						<input type="password" id="pass" name="pass" value="<?php echo $usuario['contrasenia']; ?>"></br>
+						Repita la contraseña:</br>
+						<input type="password" id="pass2" name="pass2" value="<?php echo $usuario['contrasenia']; ?>"></br>
 						Nombre:</br>
 						<input type="text" id="nombre" name="nombre" value="<?php echo $usuario['nombre']; ?>"></br>
 						Apellido:</br>
@@ -47,6 +50,10 @@
 				</div>
 			</section>
 			<aside>
+				<?php include ('./aside_botones.php'); ?>
+				<a href="./iniciar_subasta.php"><div class="boton_aside">Iniciar subasta</div></a>
+				<a href="./ver_mis_subastas.php"><div class="boton_aside">Ver mis subastas</div></a>
+				<a href="./ver_mis_ofertas.php"><div class="boton_aside">Ver ofertas realizadas</div></a>
 			</aside>
 		</div>
 		<footer>

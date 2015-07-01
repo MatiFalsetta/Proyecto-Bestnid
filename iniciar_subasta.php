@@ -8,7 +8,7 @@
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Registrarse</title>
+		<title>Bestnid Iniciar Subasta</title>
 		<script src="./javascript/validarSubasta.js"></script>
 		<link href="./estilos/estilo.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
@@ -47,6 +47,10 @@
 				</div>
 			</section>
 			<aside>
+				<?php include ('./aside_botones.php'); ?>
+				<a href="./iniciar_subasta.php"><div style="background-color: #8EF9B2;" class="boton_aside">Iniciar subasta</div></a>
+				<a href="./ver_mis_subastas.php"><div class="boton_aside">Ver mis subastas</div></a>
+				<a href="./ver_mis_ofertas.php"><div class="boton_aside">Ver ofertas realizadas</div></a>
 			</aside>
 		</div>
 		<footer>

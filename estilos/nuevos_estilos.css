@@ -1,0 +1,45 @@
+#contenedor {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #EEEEEE;
+	width: 725px;
+	padding-top: 1px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#contenedor-registro {
+	box-shadow: 0px 0px 5px 1px #999;
+	background-color: #EEEEEE;
+	width: 725px;
+	padding-top: 1px;
+	margin-bottom: 20px;
+	text-align: center;
+	
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333333;
+}
+
+#contenedor-registro input {
+	width: 200px;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+#ver_ofertas {
+	box-shadow: 0px 0px 5px 2px #DDD;
+	background-color: #FA6800;
+	text-align: center;
+	width: 120px;
+	padding: 5px;
+	margin: -40px 0px 0px 30px;
+	position: absolute;
+}
+
+#ver_ofertas:hover {
+	box-shadow: 0px 0px 5px 2px #555;
+	background-color: #8EF9B2;
+}

@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Inicio</title>
+		<title>Bestnid Inicio</title>
 		<link rel="stylesheet" href="./estilos/estilo.css">
 	</head>
 	<body>

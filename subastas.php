@@ -24,23 +24,21 @@
 	$resul=mysqli_query($conectar,$consulta) or die('Error: ' . mysqli_error($con));
 	$i=0;
 	while($subasta=mysqli_fetch_array($resul)){
-		if($i<10){
-			?>
-			<div class="miniSubasta">
-				<a href="./ver_subasta.php?id=<?php echo $subasta['idSubasta']; ?>">
-					<div class="miniFoto">
-						<img src="./<?php echo $subasta['foto'] ?>">
-					</div>
-					<div class="miniDescripcion">
-						<b>Titulo:</b> <?php echo $subasta['titulo']; ?></br>
-						<p><b>Fecha de Inicio:</b> <?php echo date_format(date_create($subasta['fechaInicio']), 'd/m/Y'); ?>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-						<b>Fecha de Finalizacion:</b> <?php echo date_format(date_create($subasta['fechaFin']), 'd/m/Y'); ?></p> 
-						<p><b>Descripcion:</b> <?php echo $subasta['descripcion']; ?></p>
-					</div>
-				</a>
-			</div>
-			<?php
-		}
+		?>
+		<div class="miniSubasta">
+			<a href="./ver_subasta.php?id=<?php echo $subasta['idSubasta']; ?>">
+				<div class="miniFoto">
+					<img src="./<?php echo $subasta['foto'] ?>">
+				</div>
+				<div class="miniDescripcion">
+					<b>Titulo:</b> <?php echo $subasta['titulo']; ?></br>
+					<p><b>Fecha de Inicio:</b> <?php echo date_format(date_create($subasta['fechaInicio']), 'd/m/Y'); ?>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<b>Fecha de Finalizacion:</b> <?php echo date_format(date_create($subasta['fechaFin']), 'd/m/Y'); ?></p> 
+					<p><b>Descripcion:</b> <?php echo $subasta['descripcion']; ?></p>
+				</div>
+			</a>
+		</div>
+		<?php
 		$i++;
 	}
 	mysqli_close($conectar);

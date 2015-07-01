@@ -1,14 +1,14 @@
 <?php
 	session_start();
 	if($_SESSION['usuario'] == ''){
-		header('Location: ./index.php?error=-1');
+		header('Location: ./index.php?error=0');
 	}
 ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Inicio</title>
+		<title>Bestnid Ver Mis Subastas</title>
 		<link rel="stylesheet" href="./estilos/estilo.css">
 	</head>
 	<body>

@@ -4,6 +4,7 @@
 		<meta charset="iso-8859-1">
 		<link rel="stylesheet" href="./estilos/estilo.css">
 	</head>
+		<?php include ('./aside_botones.php'); ?>
 		<div id="filtro_aside">
 			<h5>Filtrar por Categorias:</h5>
 			<form method="GET" name="filtro_subastas" action="./index.php">
@@ -22,8 +23,6 @@
 				<select name='categoria'>
 					<option value='-1'>Todas</option>
 					<?php
-						include_once('./sistema/conectar.php');
-						$conec=conectar();
 						$resultado=mysqli_query($conec,"SELECT * FROM categoria");
 						while($categorias=mysqli_fetch_array($resultado)){
 							$selected='';

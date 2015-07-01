@@ -6,7 +6,7 @@
 	$resul=mysqli_query($conectar,$consulta);
 	$subasta=mysqli_fetch_array($resul);
 	if($subasta == null) {
-		header('Location: ./index.php?error=-1');
+		header('Location: ./index.php?error=0');
 	}
 	$fecha = date_create($subasta['fechaFin']);
 	$hoy = new DateTime("now");
@@ -15,11 +15,11 @@
 			session_start();
 		}
 		if(!isset($_SESSION['usuario'])) {
-			header('Location: ./index.php?error=-1');
+			header('Location: ./index.php?error=0');
 		}
 		else{
 			if($_SESSION['usuario'] != $subasta['idUsuario'] && $_SESSION['admin'] == 0) {
-				header('Location: ./index.php?error=-1');
+				header('Location: ./index.php?error=0');
 			}
 		}
 	}
@@ -28,7 +28,7 @@
 <html lang="es">
 	<head>
 		<meta charset="iso-8859-1">
-		<title>Inicio</title>
+		<title>Bestnid Ver Subasta</title>
 		<link href="./estilos/estilo.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="./estilos/mas_estilos.css">
 		<link href="./estilos/otros_estilos.css" rel="stylesheet" type="text/css">

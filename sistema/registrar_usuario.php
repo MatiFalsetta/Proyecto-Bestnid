@@ -15,6 +15,6 @@
 		header("Location: ../index.php?error=9");
 	}
 	else {
-		header("Location: ../registro.php?error=10");
+		header("Location: ../registro.php?error=-10");
 	}
 ?>

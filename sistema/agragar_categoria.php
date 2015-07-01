@@ -9,6 +9,6 @@
 		header("Location: ../listar_categorias.php?error=3");
 	}
 	else {
-		header("Location: ../listar_categorias.php?error=13");
+		header("Location: ../listar_categorias.php?error=-13");
 	}
 ?>

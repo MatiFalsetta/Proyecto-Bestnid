@@ -110,18 +110,6 @@ nav {
 	text-align: center;
 }
 
-#excepcion {
-	background-color: #8EF9B2;
-	box-shadow: 0px 0px 1px 1px #999;
-	height: 18px;
-	width: 1000px;
-	text-align: center;
-	font-size: 15px;
-	margin: auto;
-	margin-top: 70px;
-	margin-bottom: -60px;
-}
-
 #cuerpo {
 	background: white;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -155,6 +143,7 @@ aside {
 	width: 200px;
 	padding-top: 1px;
 	padding-bottom: 5px;
+	margin-bottom: 20px;
 }
 
 #filtro_aside select {
@@ -171,7 +160,7 @@ aside {
 	background-color: #EEEEEE;
 	text-align: center;
 	width: 200px;
-	margin-top: 20px;
+	margin-bottom: 20px;
 	padding-top: 10px;
 	height: 30px;
 }

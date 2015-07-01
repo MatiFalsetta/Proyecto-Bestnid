@@ -12,6 +12,6 @@
 		header("Location: ../ver_subasta.php?id=$idSubasta&error=16");
 	}
 	else{
-		header("Location: ../listar_categorias.php?error=17");
+		header("Location: ../listar_categorias.php?error=-17");
 	}
 ?>

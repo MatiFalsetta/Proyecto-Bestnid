@@ -14,6 +14,6 @@
 		header("Location: ../index.php?error=19");
 	}
 	else{
-		header("Location: ../ver_subasta.php?id=$idSubasta&error=20");
+		header("Location: ../ver_subasta.php?id=$idSubasta&error=-20");
 	}
 ?>

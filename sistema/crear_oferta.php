@@ -7,7 +7,7 @@
 	$idSubasta=$_POST["idSubasta"];
 	$pesos=$_POST["pesos"];
 	$fecha=date("Y-m-d H:i:s");
-	$sql= "INSERT INTO oferta (ganador, descripcion, precio, fecha, idSubasta, idUsuario) VALUES ('0', '$oferta', '$pesos', '$fecha', '$idSubasta', '$idUsuario')";
+	$sql= "INSERT INTO oferta (descripcion, precio, fecha, idSubasta, idUsuario) VALUES ('$oferta', '$pesos', '$fecha', '$idSubasta', '$idUsuario')";
 	mysqli_query($conectar,$sql) or die('Error: ' . mysqli_error($con));
 	header("Location: ../ver_subasta.php?id=$idSubasta");
 ?>

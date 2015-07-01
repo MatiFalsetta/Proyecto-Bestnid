@@ -16,9 +16,10 @@
 	if(mysqli_num_rows($resultado)==0 || $usuario['mail']==$correo){
 		$sql= "UPDATE usuario SET fechaNac='$fecha', mail='$correo', nombre='$nombre', apellido='$apellido', DNI='$DNI', tarjetaCredito='$tarjeta', contrasenia='$contrasenia' WHERE idUsuario=$idUsuario";
 		mysqli_query($conectar,$sql) or die('Error: ' . mysqli_error($con));
+		$_SESSION['nombre'] = $nombre;
 		header("Location: ../configuracion.php?error=6");
 	}
 	else {
-		header("Location: ../configuracion.php?error=7");
+		header("Location: ../configuracion.php?error=-7");
 	}
 ?>

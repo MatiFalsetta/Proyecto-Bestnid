@@ -4,6 +4,7 @@
 		<meta charset="iso-8859-1">
 		<link rel="stylesheet" href="./estilos/estilo.css">
 	</head>
+		<?php include ('./aside_botones.php'); ?>
 		<div id="filtro_aside">
 			<h5>Filtrar por Categorias:</h5>
 			<form method="GET" name="filtro_subastas" action="./ver_mis_subastas.php">
@@ -22,8 +23,6 @@
 				<select name='categoria'>
 					<option value='-1'>Todas</option>
 					<?php
-						include_once('./sistema/conectar.php');
-						$conec=conectar();
 						$resultado=mysqli_query($conec,"SELECT * FROM categoria");
 						while($categorias=mysqli_fetch_array($resultado)){
 							$selected='';
@@ -53,6 +52,8 @@
 			if(isset($_SESSION['usuario'])) {
 		?>
 			<a href="./iniciar_subasta.php"><div class="boton_aside">Iniciar subasta</div></a>
+			<a href="./ver_mis_subastas.php"><div style="background-color: #8EF9B2;" class="boton_aside">Ver mis subastas</div></a>
+			<a href="./ver_mis_ofertas.php"><div class="boton_aside">Ver ofertas realizadas</div></a>
 		<?php
 			}
 		?>

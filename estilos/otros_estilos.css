@@ -7,6 +7,8 @@
 	margin-bottom: 20px;
 	padding-top: 10px;
 	height: 30px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .boton_configuracion:hover {
@@ -65,8 +67,23 @@
 	height: 20px;
 }
 
+.caja {
+	width: 501px;
+	margin-left: 112px;
+}
+
 .caja input {
 	width: 235px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.selec {
+	float:right;
+}
+
+.selec input {
+	width: 258px;
 }
 
 .caja2 {
