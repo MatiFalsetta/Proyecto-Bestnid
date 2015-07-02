@@ -24,19 +24,21 @@
 						$hoy=date("Y-m-d H:i:s");
 						$resul=mysqli_query($conec,"SELECT oferta.IdSubasta, oferta.descripcion AS oferta, subasta.descripcion, subasta.titulo FROM oferta INNER JOIN subasta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE oferta.idUsuario = $_SESSION[usuario] AND subasta.pago = 0");
 						if(mysqli_num_rows($resul)!=0){
-							while($oferta=mysqli_fetch_array($resul)){
-					?>
-								<div id="contenedor">
-									<h2><b>Ofertas Ganadoras! </b></h2>
-									<h4>Seleccione una oferta para pagarla: </h4>
-									<a href='./pagar_subasta.php?id=<?php echo $oferta['IdSubasta']; ?>'><div class='oferta'><div class='o'>Titulo:</div> <?php echo $oferta['titulo']; ?></br>&nbsp</br>
-									<div class='o'>Descripcion:</div> <?php echo $oferta['descripcion']; ?></br>&nbsp</br>
-									<div class='o'>Oferta:</div> <?php echo $oferta['oferta']; ?></div></a></br>
-								</div>
+			?>
+						<div id="contenedor">
+							<h2><b>Ofertas Ganadoras! </b></h2>
+							<h4>Seleccione una oferta para pagarla: </h4>
+			<?php
+					while($oferta=mysqli_fetch_array($resul)){
+			?>
+							<a href='./pagar_subasta.php?id=<?php echo $oferta['IdSubasta']; ?>'><div class='oferta'><div class='o'>Titulo:</div> <?php echo $oferta['titulo']; ?></br>&nbsp</br>
+							<div class='o'>Descripcion:</div> <?php echo $oferta['descripcion']; ?></br>&nbsp</br>
+							<div class='o'>Oferta:</div> <?php echo $oferta['oferta']; ?></div></a></br>
 					<?php
 							}
 						}
 					?>
+						</div>
 				<div id="contenedor">
 					<h2><b>Mis ofertas activas: </b></h2>
 					<?php
@@ -50,7 +52,7 @@
 							}
 						}
 						else{
-							echo "<b>Aun no has realizado ninguna oferta.</b></br>&nbsp";
+							echo "<b>En este momento no tienen ninguna oferta activa.</b></br>&nbsp";
 						}
 						mysqli_close($conec);
 					?>

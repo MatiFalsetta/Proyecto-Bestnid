@@ -82,9 +82,9 @@
 								<div id="crear_comentario">
 								<b>Ofertar por esta subasta:</b>
 									<form method="POST" name="crear_oferta" action="./sistema/crear_oferta.php">
-										<textarea name="oferta" rows="6" cols="80" id="ofertar" maxlength="1000" placeholder="¿Por que quieres este producto?"></textarea>
+										<textarea name="oferta" rows="6" cols="80" id="ofertar" maxlength="1000" placeholder="Por que queres este producto?"></textarea>
 										<div id="pesos">
-											<p><b>Pesos:&nbsp$</b> <input type="number" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="1"></p>
+											<p><b>Pesos:&nbsp$</b> <input type="number" id="peso0" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="1"></p>
 										</div>
 										<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
 										<input type="button" value="Ofertar" onclick="validarOferta()">
@@ -100,12 +100,12 @@
 								<div id="crear_comentario">
 								<b>Oferta realizada a esta subasta:</b>
 									<form method="POST" name="modificar_oferta" action="./sistema/modificar_oferta.php">
-										<textarea name="oferta" rows="6" cols="80" id="ofertar" maxlength="1000"><?php echo $re['descripcion']; ?></textarea>
+										<textarea name="oferta" rows="6" cols="80" id="ofertar0" maxlength="1000"><?php echo $re['descripcion']; ?></textarea>
 										<div id="pesos">
-											<p><b>Pesos:&nbsp$</b> <input type="number" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="<?php echo $re['precio']; ?>"></p>
+											<p><b>Pesos:&nbsp$</b> <input type="number" id="peso1" name="pesos" min="1" max="9999999999999" step="0.01" size="6" value="<?php echo $re['precio']; ?>"></p>
 										</div>
 										<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
-										<input type="submit" value="Modificar">
+										<input type="button" value="Modificar" onclick="validarOfertaMod()">
 									</form>
 									<form method="POST" name="eliminar_oferta" action="./sistema/eliminar_oferta.php">
 										<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
@@ -127,7 +127,7 @@
 					?>
 							<div id="crear_comentario">
 								<form method="POST" name="crear_comentario" action="./sistema/crear_comentario.php">
-									<textarea name="comentario" rows="6" cols="80" id="comentario"  maxlength="1000" placeholder="¿Tienes algo que comentar?"></textarea>
+									<textarea name="comentario" rows="6" cols="80" id="comentario"  maxlength="1000" placeholder="Tienes algo que comentar?"></textarea>
 									<input type="hidden" name="idSubasta" value="<?php echo $id; ?>">
 									<input type="submit" value="Publicar">
 								</form>

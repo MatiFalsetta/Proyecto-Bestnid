@@ -22,14 +22,14 @@
 					<form enctype="multipart/form-data" method="POST" name="subasta" action="./sistema/registrar_subasta.php">
 						Titulo:</br>
 						<input type="text" id="titulo" name="titulo" placeholder="Titulo"></br>
-						Descripción:</br>
+						Descripci&oacuten:</br>
 						<textarea id="descripcion" name="descripcion" placeholder="Descripcion"></textarea></br>
-						Fecha de finalizacion:</br> (Año-Mes-Dia)</br>
+						Fecha de finalizacion:</br> (A&ntildeo-Mes-Dia)</br>
 						<input type="date" id="fechafin" name="fechafin" value="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime( '+1 month', strtotime(date('y-m-d')))); ?>"></br>
 						Hora de finalizacion:</br> (Hora:Minutos)</br>
 						<input type="time" name="fechafinhora" value="23:59"></br>
 						Categorias:</br>
-						<div id="categorias">
+						<div id="categorias" style="padding-left: 30px;">
 							<?php
 								include('./sistema/conectar.php');
 								$conec=conectar();

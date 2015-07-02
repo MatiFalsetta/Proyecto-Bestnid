@@ -17,6 +17,7 @@ nav {
 	background-color: white;
 	box-shadow: 0px 2px 5px -1px #999;
 	height: 60px;
+	z-index: 1;
 }
 
 #barraNav {
@@ -166,7 +167,7 @@ aside {
 }
 
 .boton_aside:hover {
-	background-color: #8EF9B2;
+	background-color: #FDFD55;
 }
 
 a {
@@ -199,7 +200,7 @@ footer span {
 }
 
 .miniSubasta:hover {
-	background-color: #8EF9B2;
+	background-color: #FFFF99;
 }
 
 .miniSubasta a {

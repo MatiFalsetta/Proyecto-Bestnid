@@ -14,7 +14,6 @@
 		<div id='barraNav'>
 			<a href="./index.php"><img id='nav_logo' src="./imagenes/bestnid/logo.png"></a>
 			<a href="./index.php""><div class="nav_boton">Bestnid</div></a>
-			<a href=""><div class="nav_boton">Preguntas frecuentes</div></a>
 			<?php
 				if(!isset($_SESSION)) {
 					session_start();

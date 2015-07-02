@@ -31,9 +31,9 @@
 						?>
 						Correo electronico:</br>
 						<input type="email" id="email" name="user" value="<?php echo $usuario['mail']; ?>"></br>
-						Contraseña:</br>
+						Clave:</br>
 						<input type="password" id="pass" name="pass" value="<?php echo $usuario['contrasenia']; ?>"></br>
-						Repita la contraseña:</br>
+						Repita la Clave:</br>
 						<input type="password" id="pass2" name="pass2" value="<?php echo $usuario['contrasenia']; ?>"></br>
 						Nombre:</br>
 						<input type="text" id="nombre" name="nombre" value="<?php echo $usuario['nombre']; ?>"></br>
@@ -41,9 +41,9 @@
 						<input type="text" id="apellido" name="apellido" value="<?php echo $usuario['apellido']; ?>"></br>
 						DNI:</br>
 						<input type="number" id="dni" name="DNI" value="<?php echo $usuario['dni']; ?>"></br>
-						Nº de Tarjeta de Credito:</br>
+						Numero de Tarjeta de Credito:</br>
 						<input type="number" id="tarjeta" name="tarjeta" value="<?php echo $usuario['tarjetaCredito']; ?>"></br>
-						Fecha de nacimiento:</br> (Año-Mes-Dia)</br>
+						Fecha de nacimiento:</br> (A&ntildeo-Mes-Dia)</br>
 						<input type="date" id="fecha" name="fecha" value="<?php echo $fecha ?>"></br>
 						<input type="button" value="Modificar" onclick="validarRegistro()">
 					</form>

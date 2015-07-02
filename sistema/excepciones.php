@@ -87,6 +87,12 @@
 			case 21:
 				return("Se ha elegido al ganador de la subasta exitosamente.");
 			break;
+			case 22:
+				return("Ha abonado la subasta exitosamente! Se le enviaran los datos del subastador via email para poder contactarlo.");
+			break;
+			case -23:
+				return("Datos incorrectos. No se ha podido abonar la subasta correctamente.");
+			break;
 		}
 	}
 ?>

@@ -10,13 +10,13 @@
 		$resul=mysqli_query($conec,"SELECT * FROM subasta INNER JOIN oferta ON (subasta.idSubasta = oferta.idSubasta) WHERE subasta.fechaFin < '$hoy' AND subasta.idUsuario = $idUsuario AND subasta.idOfertaGanadora = -1");
 		if(mysqli_num_rows($resul)!=0){
 ?>
-			<a href="./ver_mis_subastas.php"><div style="background-color: #FA6800;" class="boton_aside">Elegir Ganador!</div></a>
+			<a href="./ver_mis_subastas.php"><div style="background-color: #FDFD55;" class="boton_aside">Elegir Ganador!</div></a>
 <?php
 		}
 		$resul=mysqli_query($conec,"SELECT * FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE subasta.fechaFin < '$hoy' AND oferta.IdUsuario = $idUsuario AND subasta.pago = 0");
 		if(mysqli_num_rows($resul)!=0){
 ?>
-			<a href="./ver_mis_ofertas.php"><div style="background-color: #FA6800;" class="boton_aside">Ha ganado una subasta!</div></a>
+			<a href="./ver_mis_ofertas.php"><div style="background-color: #FDFD55;" class="boton_aside">Ha ganado una subasta!</div></a>
 <?php
 		}
 	}

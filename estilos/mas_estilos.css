@@ -22,7 +22,7 @@
 
 #boton_ver_ofertas {
 	box-shadow: 0px 0px 2px 1px #999;
-	background-color: #FA6800;
+	background-color: #FFFF99;
 	float: left;
 	text-align: center;
 	width: 120px;
@@ -33,7 +33,7 @@
 }
 
 #boton_ver_ofertas:hover {
-	background-color: #99FFCC;
+	background-color: #FDFD55;
 }
 
 #iniciar_subasta {
@@ -82,7 +82,7 @@
 
 .oferta {
 	box-shadow: 0px 0px 2px 1px #999;
-	background-color: #99FFCC;
+	background-color: #FFFF99;
 	width: 450px;
 	margin: auto;
 	padding: 10px;
@@ -90,7 +90,7 @@
 }
 
 .oferta:hover {
-	background-color: #8EF9B2;
+	background-color: #FDFD55;
 }
 
 .o {
@@ -117,7 +117,7 @@
 }
 
 #excepcionExito {
-	background-color: #FFE80D;
+	background-color: #60dd17;
 	box-shadow: 0px 0px 2px 0px #999;
 	color: black;
 	height: 20px;

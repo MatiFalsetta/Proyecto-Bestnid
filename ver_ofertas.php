@@ -37,6 +37,8 @@
 		<div id='cuerpo'>
 			<section>
 				<div id="contenedor">
+					<a href="./ver_subasta.php?id=<?php echo $id ?>"><div class="boton_aside" style="background-color: #8EF9B2; height: 20px; width: 150px; padding-top: 5px; margin-left: 570px; margin-top: 5px; position: absolute;">Volver a la Subasta</div></a>
+					</br>
 					<?php
 						if(isset($_GET["oferta"]) && $subasta['fechaFin'] < $hoy && $subasta['idOfertaGanadora'] == -1) {
 							$idOferta=$_GET["oferta"];
@@ -59,21 +61,41 @@
 						}
 					?>
 					<h2><b>Ofertas realizadas: </b></h2>
-					<h3>Elegir al ganador: </h3>
-					</br>
 					<?php
+						$resultado=mysqli_query($conectar,"SELECT oferta.descripcion AS oferta FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE subasta.idSubasta = $id");
+						if(mysqli_num_rows($resultado) != 0){
+							?>
+								<h3>GANADORA: </h3>
+							<?php
+							$o=mysqli_fetch_array($resultado);
+							echo "<div class='oferta' style='background-color: #FA6800'><div class='o'>Descripcion:</div> $o[oferta]</div></br>";
+							?>
+								</br>
+								<h3>Todas las ofertas: </h3>
+							<?php
+						}
 						$resul=mysqli_query($conectar,"SELECT * FROM oferta WHERE IdSubasta='$id' ORDER BY fecha");
-						if ($subasta['fechaFin'] < $hoy && $subasta['idOfertaGanadora'] == -1) {
-							while($oferta=mysqli_fetch_array($resul)){
-								echo "<a href='./ver_ofertas.php?id=$id&oferta=$oferta[idOferta]'><div class='oferta'><div class='o'>Descripcion:</div> $oferta[descripcion]</div></a></br>";
+						if(mysqli_num_rows($resul) != 0){
+							if ($subasta['fechaFin'] < $hoy && $subasta['idOfertaGanadora'] == -1 && $_SESSION['usuario'] == $subasta['IdUsuario']) {
+								?>
+									<h3>Elegir al ganador: </h3>
+									</br>
+								<?php
+								while($oferta=mysqli_fetch_array($resul)){
+									echo "<a href='./ver_ofertas.php?id=$id&oferta=$oferta[idOferta]'><div class='oferta'><div class='o'>Descripcion:</div> $oferta[descripcion]</div></a></br>";
+								}
+							}
+							else {
+								while($oferta=mysqli_fetch_array($resul)){
+									echo "<div class='oferta'><div class='o'>Descripcion:</div> $oferta[descripcion]</div></br>";
+								}
 							}
 						}
 						else {
-							while($oferta=mysqli_fetch_array($resul)){
-								echo "<div class='oferta'><div class='o'>Descripcion:</div> $oferta[descripcion]</div></br>";
-							}
+							echo "<h5>No hay ninguna oferta para esta subasta. </h5>";
 						}
 					?>
+					</br>
 				</div>
 			</section>
 			<aside>
