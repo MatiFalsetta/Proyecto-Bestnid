@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if($_SESSION['usuario'] != '1'){
+	if($_SESSION['admin'] != '1'){
 		header('Location: ./index.php?error=0');
 	}
 ?>
