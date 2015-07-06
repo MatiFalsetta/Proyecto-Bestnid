@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-07-2015 a las 01:26:58
+-- Tiempo de generación: 06-07-2015 a las 17:28:04
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -77,15 +77,20 @@ INSERT INTO `comentario` (`idComentario`, `descripcion`, `fecha`, `idSubasta`, `
 
 CREATE TABLE IF NOT EXISTS `comision` (
 `idComision` int(11) NOT NULL,
-  `porcentaje` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `porcentaje` int(11) NOT NULL,
+  `fecha` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `comision`
 --
 
-INSERT INTO `comision` (`idComision`, `porcentaje`) VALUES
-(1, 25);
+INSERT INTO `comision` (`idComision`, `porcentaje`, `fecha`) VALUES
+(1, 30, '2015-01-01 00:00:00'),
+(2, 20, '2015-05-29 00:00:00'),
+(3, 15, '2015-06-08 00:00:00'),
+(4, 25, '2015-06-20 00:00:00'),
+(5, 20, '2015-07-06 16:52:08');
 
 -- --------------------------------------------------------
 
@@ -100,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `oferta` (
   `fecha` datetime NOT NULL,
   `IdSubasta` int(11) NOT NULL,
   `IdUsuario` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `oferta`
@@ -138,7 +143,7 @@ INSERT INTO `subasta` (`idSubasta`, `titulo`, `descripcion`, `foto`, `fechaInici
 (23, 'Manga de Naruto', 'Subasto el manga de Naruto, de los tomos 1 al 20.', 'imagenes/0e7aef606d6a1dfd2c193ec7586e86cb.jpg', '2015-06-02 09:21:40', '2015-08-23 23:30:00', 1, -1, 0),
 (24, 'PlayStation 3', 'Se subasta una PlayStation 3 en perfecto estado con un aÃ±o de uso.', 'imagenes/ps3_slim_640_ars-thumb-640xauto-7741.jpg', '2015-06-02 15:07:04', '2015-08-22 03:03:03', 1, -1, 0),
 (25, 'Televisor Samsung', 'Oferto al mejor postor un televisor Samsung 32" SmartTV. El modelo es Samsung 32h5500 y esta sin estrenar.', 'imagenes/bcf82c8a3080e98547c79cf30dbbb92ffd301008.jpg', '2015-06-02 01:10:01', '2015-06-23 22:00:50', 15, 11, 0),
-(26, 'Nokia Lumia 635', 'Quiero subastar mi celular nokia lumia 635 con 3 meses de uso ya que conseguÃ­ uno nuevo. Se lo voy a dar al que me diga por que lo necesita y para que dependiendo de la urgencia.', 'imagenes/Lumia-635-1.jpg', '2015-05-20 23:59:04', '2015-06-07 21:00:59', 1, 12, 0),
+(26, 'Nokia Lumia 635', 'Quiero subastar mi celular nokia lumia 635 con 3 meses de uso ya que conseguÃ­ uno nuevo. Se lo voy a dar al que me diga por que lo necesita y para que dependiendo de la urgencia.', 'imagenes/Lumia-635-1.jpg', '2015-05-20 23:59:04', '2015-06-07 21:00:59', 1, -1, 1),
 (28, 'Nueva subasta', 'subasto estas dos mascotas para su confort', 'imagenes/WP_20150501_12_48_51_Pro.jpg', '2015-06-05 14:35:02', '2015-08-05 23:59:00', 1, -1, 0),
 (29, 'Kingdom Hearts', 'Juego de ps2 en perfecto estado y con muy poco uso.', 'imagenes/kingdomhearts-03.jpg', '2015-06-05 14:45:08', '2015-08-14 00:00:00', 15, -1, 0);
 
@@ -205,7 +210,7 @@ INSERT INTO `usuario` (`idUsuario`, `administrador`, `fechaNac`, `mail`, `nombre
 (17, 0, '1998-06-05', 'sandra@hotmail.com.ar', 'Santra', 'Ledesma', 1231231, 312313123, '21313qweqwe'),
 (18, 0, '1987-01-12', 'pablo@hotmail.com', 'Pablo', 'Lujan', 312124124, 2147483647, '564987qedga'),
 (19, 0, '2090-06-17', 'matias@matias.com', 'matias', 'matias', 33333333, 333333333, 'matias123'),
-(20, 1, '1993-08-14', 'mati_772@hotmail.com', 'Matias', 'Falsetta', 37802912, 324198461, 'matias93');
+(20, 1, '1993-08-14', 'mati_772@hotmail.com', 'MatÃ­as Carlos', 'Falsetta', 37802912, 324198461, 'matias93');
 
 --
 -- Índices para tablas volcadas
@@ -271,12 +276,12 @@ MODIFY `idComentario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 -- AUTO_INCREMENT de la tabla `comision`
 --
 ALTER TABLE `comision`
-MODIFY `idComision` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `idComision` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `oferta`
 --
 ALTER TABLE `oferta`
-MODIFY `idOferta` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+MODIFY `idOferta` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `subasta`
 --

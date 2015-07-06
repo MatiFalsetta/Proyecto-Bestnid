@@ -24,6 +24,8 @@
 							<h2>Opciones de administrador:</h2>
 							<a href="./listar_categorias.php"><div class="boton_configuracion">Configurar categorias</div></a>
 							<a href="./listar_usuarios.php"><div class="boton_configuracion">Listar usuarios registrados</div></a>
+							<a href="./ver_ganancias.php"><div class="boton_configuracion">Ver las ganancias de la aplicacion</div></a>
+							<a href="./ver_comision.php"><div class="boton_configuracion">Ver o modificar la comision actual</div></a>
 							</br>
 					<?php
 						}

@@ -54,7 +54,7 @@ nav {
 
 .nav_boton {
 	padding-top: 23px;
-	padding-right: 15px;
+	padding-right: 5px;
 	padding-left: 15px;
 	padding-bottom: 20px;
 	float: left;
@@ -107,7 +107,7 @@ nav {
 #nav_derecha{
 	float: right;
 	height: 60px;
-	width: 500px;
+	width: 239px;
 	text-align: center;
 }
 

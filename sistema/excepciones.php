@@ -25,7 +25,7 @@
 				return ("Se ha iniciado sesion exitosamente.");
 			break;
 			case -1:
-				return("Usuario o contraseña incorrectas. Intente ingresar nuevamente los datos.");
+				return("Usuario o clave incorrectas. Intente ingresar nuevamente los datos.");
 			break;
 			case 2:
 				return("Se ha cerrado sesion exitosamente.");
@@ -92,6 +92,9 @@
 			break;
 			case -23:
 				return("Datos incorrectos. No se ha podido abonar la subasta correctamente.");
+			break;
+			case 24:
+				return("Se ha modificado exitosamente la comision de la aplicacion web BESTNID.");
 			break;
 		}
 	}

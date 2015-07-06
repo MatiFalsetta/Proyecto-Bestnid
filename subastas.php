@@ -23,6 +23,11 @@
 	$consulta=$consulta." ORDER BY subasta.fechaFin $orden";
 	$resul=mysqli_query($conectar,$consulta) or die('Error: ' . mysqli_error($con));
 	$i=0;
+	if(mysqli_num_rows($resul) == 0){
+		?>
+			<h3>No se han encontrado subastas. Intente con otro filtro o haga click <a href="./index.php" style="color: blue;">AQUI</a>.</h3>
+		<?php
+	}
 	while($subasta=mysqli_fetch_array($resul)){
 		?>
 		<div class="miniSubasta">

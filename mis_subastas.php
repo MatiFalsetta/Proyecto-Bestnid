@@ -35,6 +35,11 @@
 		}
 		$consulta=$consulta." ORDER BY subasta.fechaFin $orden";
 		$resul=mysqli_query($conectar,$consulta);
+		if(mysqli_num_rows($resul) == 0){
+			?>
+				<h3>Aun no ha realizado ninguna subasta. Ingrese <a href="./iniciar_subasta.php" style="color: blue;">AQUI</a> para iniar una subasta.</h3>
+			<?php
+		}
 		while($subasta=mysqli_fetch_array($resul)){
 			if($subasta['fechaFin'] < $hoy) {
 				if($subasta['idOfertaGanadora'] == -1) {

@@ -62,13 +62,13 @@
 					?>
 					<h2><b>Ofertas realizadas: </b></h2>
 					<?php
-						$resultado=mysqli_query($conectar,"SELECT oferta.descripcion AS oferta FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE subasta.idSubasta = $id");
+						$resultado=mysqli_query($conectar,"SELECT oferta.precio, oferta.descripcion AS oferta FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE subasta.idSubasta = $id");
 						if(mysqli_num_rows($resultado) != 0){
 							?>
 								<h3>GANADORA: </h3>
 							<?php
 							$o=mysqli_fetch_array($resultado);
-							echo "<div class='oferta' style='background-color: #FA6800'><div class='o'>Descripcion:</div> $o[oferta]</div></br>";
+							echo "<div class='oferta' style='background-color: #FA6800'><div class='o'>Descripcion:</div> $o[oferta]</br></br><div class='o'>Valor de la oferta: </div> $$o[precio]</div></br>";
 							?>
 								</br>
 								<h3>Todas las ofertas: </h3>

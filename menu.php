@@ -20,7 +20,7 @@
 				}
 				if(!isset($_SESSION['usuario'])) {
 			?>
-				<div id="nav_derecha">
+				<div id="nav_derecha" style="width: 465px;">
 					<a href="./registro.php"><div class="nav_boton">Registrarse</div></a>
 					<a href="./recuperar_clave.php"><div class="nav_boton">Recuperar clave</div></a>
 					<form method="POST" name="iniciarsesion" action="./sistema/iniciar_sesion.php">
@@ -38,10 +38,7 @@
 				else {
 			?>
 				<div id="nav_derecha">
-					<div class="nav_boton_bienvenido">
-						Bienvenido!</br>
-						<?php echo $_SESSION['nombre'] ?> 
-					</div>
+					
 					<a href="./configuracion.php"><div class="nav_boton">Configuracion</div></a>
 					<a href="./sistema/cerrar_sesion.php"><div class="nav_boton">Cerrar sesion</div></a>
 				</div>
