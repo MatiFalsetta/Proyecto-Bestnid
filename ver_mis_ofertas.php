@@ -22,7 +22,7 @@
 						include('./sistema/conectar.php');
 						$conec=conectar();
 						$hoy=date("Y-m-d H:i:s");
-						$resul=mysqli_query($conec,"SELECT oferta.IdSubasta, oferta.descripcion AS oferta, subasta.descripcion, subasta.titulo FROM oferta INNER JOIN subasta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE oferta.idUsuario = $_SESSION[usuario] AND subasta.pago = 0");
+						$resul=mysqli_query($conec,"SELECT mail, oferta.IdSubasta, oferta.descripcion AS oferta, subasta.descripcion, subasta.titulo FROM oferta INNER JOIN subasta ON (subasta.idOfertaGanadora = oferta.idOferta) INNER JOIN usuario ON (subasta.IdUsuario = usuario.idUsuario) WHERE oferta.idUsuario = $_SESSION[usuario] AND subasta.pago = 0");
 						if(mysqli_num_rows($resul)!=0){
 					?>
 						<div id="contenedor">
@@ -31,9 +31,12 @@
 					<?php
 						while($oferta=mysqli_fetch_array($resul)){
 					?>
-							<a href='./pagar_subasta.php?id=<?php echo $oferta['IdSubasta']; ?>'><div class='oferta'><div class='o'>Titulo:</div> <?php echo $oferta['titulo']; ?></br>&nbsp</br>
-							<div class='o'>Descripcion:</div> <?php echo $oferta['descripcion']; ?></br>&nbsp</br>
-							<div class='o'>Oferta:</div> <?php echo $oferta['oferta']; ?></div></a></br>
+							<a href='./pagar_subasta.php?id=<?php echo $oferta['IdSubasta']; ?>'><div class='oferta'>
+								<div class='o'>Titulo:</div> <?php echo $oferta['titulo']; ?></br>&nbsp</br>
+								<div class='o'>Correo del subastador:</div> <?php echo $oferta['mail']; ?></br>&nbsp</br>
+								<div class='o'>Descripcion:</div> <?php echo $oferta['descripcion']; ?></br>&nbsp</br>
+								<div class='o'>Oferta:</div> <?php echo $oferta['oferta']; ?>
+							</div></a></br>
 					<?php
 							}
 						echo "</div>";

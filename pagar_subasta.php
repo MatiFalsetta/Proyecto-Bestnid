@@ -7,7 +7,7 @@
 	$idUsuario = $_SESSION['usuario'];
 	$conectar=conectar();
 	$idSubasta=$_GET['id'];
-	$resultado=mysqli_query($conectar,"SELECT * FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE subasta.idSubasta = $idSubasta AND oferta.idUsuario = $idUsuario AND pago = 0");
+	$resultado=mysqli_query($conectar,"SELECT * FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) INNER JOIN usuario ON (subasta.IdUsuario = usuario.idUsuario) WHERE subasta.idSubasta = $idSubasta AND oferta.idUsuario = $idUsuario AND pago = 0");
 	if(mysqli_num_rows($resultado) == 0){
 		header('Location: ./index.php?error=0');
 	}
@@ -29,7 +29,11 @@
 				<div id="contenedor-registro">
 					<h2>Pagar subasta con tarjeta de Credito/Debito</h2>
 					<h3>Ingresar datos de la tarjeta:</h3></br>
-					<div class="oferta" style="width: 400px; height: 45px; text-align: center;"><h3>Monto total a abonar: $<?php echo $subasta['precio']; ?></h3></div></br>
+					<div class="oferta" style="width: 400px; height: 120px; text-align: center;">
+						<h2>Monto total a abonar: $<?php echo $subasta['precio']; ?></h2>
+						<h3>Correo del subastador:</h3>
+						<h3><?php echo $subasta['mail']; ?></h3>
+					</div></br>
 					<form method="POST" name="pago" action="./sistema/pagar_subasta.php">
 						<?php
 							$resul=mysqli_query($conectar,"SELECT * FROM usuario WHERE idUsuario='$idUsuario'");
