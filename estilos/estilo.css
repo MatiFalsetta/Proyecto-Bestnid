@@ -1,5 +1,7 @@
 body {
 	background-color: rgb(242, 242, 242);
+	background-image: url("../imagenes/bestnid/interlacement2.png");
+	background-attachment: fixed;
 	margin: auto;
 }
 

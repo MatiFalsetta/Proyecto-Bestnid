@@ -37,7 +37,7 @@
 		<div id='cuerpo'>
 			<section>
 				<div id="contenedor">
-					<a href="./ver_subasta.php?id=<?php echo $id ?>"><div class="boton_aside" style="background-color: #8EF9B2; height: 20px; width: 150px; padding-top: 5px; margin-left: 570px; margin-top: 5px; position: absolute;">Volver a la Subasta</div></a>
+					<a href="./ver_subasta.php?id=<?php echo $id ?>"><div id="boton_ver_ofertas" style="width: 150px; margin-left: 565px; margin-top: 5px; position: absolute;">Volver a la Subasta</div></a>
 					</br>
 					<?php
 						if(isset($_GET["oferta"]) && $subasta['fechaFin'] < $hoy && $subasta['idOfertaGanadora'] == -1) {
@@ -62,16 +62,30 @@
 					?>
 					<h2><b>Ofertas realizadas: </b></h2>
 					<?php
-						$resultado=mysqli_query($conectar,"SELECT oferta.precio, oferta.descripcion AS oferta FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) WHERE subasta.idSubasta = $id");
+						$resultado=mysqli_query($conectar,"SELECT usuario.mail, oferta.precio, oferta.descripcion, subasta.pago FROM subasta INNER JOIN oferta ON (subasta.idOfertaGanadora = oferta.idOferta) INNER JOIN usuario ON (oferta.IdUsuario = usuario.idUsuario) WHERE subasta.idSubasta = $id");
 						if(mysqli_num_rows($resultado) != 0){
 							?>
 								<h3>GANADORA: </h3>
 							<?php
 							$o=mysqli_fetch_array($resultado);
-							echo "<div class='oferta' style='background-color: #FA6800'><div class='o'>Descripcion:</div> $o[oferta]</br></br><div class='o'>Valor de la oferta: </div> $$o[precio]</div></br>";
+							if($o['pago'] == 0){
+								$pagado='LA OFERTA AUN NO ESTA PAGA';
+							}
+							else{
+								$pagado='LA OFERTA YA FUE PAGADA!';
+							}
+							//FA6800
+							echo "<div class='oferta' style='background-color: #FDFD55'>
+								<div class='o'>Correo ganador:</div> $o[mail]</br></br>
+								<div class='o'>Descripcion:</div> $o[descripcion]</br></br>
+								<div class='o'>Valor de la oferta: </div> $$o[precio]</br>
+								<h3 style='text-align: center; margin-bottom: 5px;'>$pagado</h3>
+							</div></br>";
 							?>
+				</div>
+				<div id="contenedor">
 								</br>
-								<h3>Todas las ofertas: </h3>
+								<h2>Todas las ofertas: </h2>
 							<?php
 						}
 						$resul=mysqli_query($conectar,"SELECT * FROM oferta WHERE IdSubasta='$id' ORDER BY fecha");
