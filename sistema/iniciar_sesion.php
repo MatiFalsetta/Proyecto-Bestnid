@@ -9,7 +9,7 @@
 		$usuario = mysqli_fetch_array($resul);
 		$_SESSION['usuario'] = $usuario['idUsuario'];
 		$_SESSION['admin'] = $usuario['administrador'];
-		$_SESSION['nombre'] = $usuario['nombre'];
+		$_SESSION['mail'] = $user;
 		header("Location: ../index.php?error=1");
 	}
 	else{

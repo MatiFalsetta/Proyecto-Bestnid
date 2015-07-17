@@ -37,8 +37,17 @@
 				}
 				else {
 			?>
+				<div style="margin-left: 75px;" class="nav_boton"><b> Bienvenido: 
+					<div style="color: #3b5998; display: inline-block;">
+					<?php 
+						if(!isset($_SESSION)) {
+							session_start();
+						}
+						echo $_SESSION['mail'];
+					?>
+					</div>
+				</b></div>
 				<div id="nav_derecha">
-					
 					<a href="./configuracion.php"><div class="nav_boton">Configuracion</div></a>
 					<a href="./sistema/cerrar_sesion.php"><div class="nav_boton">Cerrar sesion</div></a>
 				</div>

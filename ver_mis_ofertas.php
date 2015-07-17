@@ -26,6 +26,7 @@
 						if(mysqli_num_rows($resul)!=0){
 					?>
 						<div id="contenedor">
+							<a href="./ver_mis_ofertas_finalizadas.php"><div id="boton_ver_ofertas" style="width: 150px; margin-left: 565px; margin-top: 5px; position: absolute;">Ver ofertas pagas</div></a>
 							<h2><b>Ofertas Ganadoras! </b></h2>
 							<h4>Seleccione una oferta para pagarla: </h4>
 					<?php
@@ -43,6 +44,7 @@
 						}
 					?>
 				<div id="contenedor">
+					<a href="./ver_mis_ofertas_finalizadas.php"><div id="boton_ver_ofertas" style="width: 150px; margin-left: 565px; margin-top: 5px; position: absolute;">Ver ofertas pagas</div></a>
 					<h2><b>Mis ofertas activas: </b></h2>
 					<?php
 						$hoy=date("Y-m-d H:i:s");

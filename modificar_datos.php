@@ -29,8 +29,8 @@
 							$usuario=mysqli_fetch_array($resul);
 							$fecha=$usuario['fechaNac'];
 						?>
-						Correo electronico:</br>
-						<input type="email" id="email" name="user" value="<?php echo $usuario['mail']; ?>"></br>
+						Usuario: <?php echo $usuario['mail']; ?></br>&nbsp</br>
+						<input type="hidden" id="email" name="email" value="<?php echo $usuario['mail']; ?>"></br>
 						Clave:</br>
 						<input type="password" id="pass" name="pass" value="<?php echo $usuario['contrasenia']; ?>"></br>
 						Repita la Clave:</br>
